@@ -20,6 +20,7 @@ function findAllPipes(str) {
   let output = [];
 
   while ((results = regex.exec(str)) !== null) {
+    //@ts-ignore
     output.push(results.index);
   }
   
@@ -40,7 +41,7 @@ function pipeIt(str, pipeIndexes) {
 
 
 export class ChordChart {
-  rawForm: Array<any>;
+  rawForm: any[] | undefined;
   currentKey: any; // todo
 
   static getAllKeys() {
@@ -278,7 +279,7 @@ export class ChordChart {
   transpose(key: String) {
     var newKey = ChordChart.getKeyByName(key);
     var delta = ChordChart.getDelta(this.currentKey.value, newKey.value);
-    this.rawForm = this.rawForm.map((l) => {
+    this.rawForm = this.rawForm!.map((l) => {
       return ChordChart.isChordLine(l) ? { chordLine: true, values: this.transposeLine(l.values, delta, newKey) } : l;
     });
 
@@ -286,7 +287,7 @@ export class ChordChart {
   }
 
   asText() {
-    return this.rawForm.map(function (l) {
+    return this.rawForm!.map(function (l) {
       if (ChordChart.isChordLine(l)) {
         l = l.values.map(lToken => pipeIt(lToken.value, lToken.pipes)).join('');
       }
@@ -295,7 +296,7 @@ export class ChordChart {
   }
 
   asHtml(opts: any = {}) {
-    return this.rawForm.map(function (l, i) {
+    return this.rawForm!.map(function (l, i) {
       if (ChordChart.isChordLine(l)) {
         var chords = l.values.map((chordLineToken : ChordLineToken, index, array) => {
           let value = chordLineToken.value;

@@ -5,6 +5,8 @@ render chord charts for you, in HTML!
 ## Installation
 ```
 npm install hrgui/chord-charts
+OR 
+yarn add hrgui/chord-charts
 ```
 
 # Getting Started

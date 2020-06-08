@@ -28,6 +28,7 @@ export class ReactChordChart extends ChordChart {
    * @param {Object} opts
    */
   asReactElements(opts: any = {}) {
+    //@ts-ignore
     return this.rawForm.map(function(l, i) {
       const isChordLine = ChordChart.isChordLine(l);
       if (isChordLine) {

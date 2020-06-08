@@ -1,6 +1,4 @@
-/// <reference path="../node_modules/@types/jasmine/index.d.ts" />
-
-import {ChordChart} from '../src/index';
+import {ChordChart} from './index';
 
 describe('new line check', function() {
   it('should preserve empty new lines', function() {

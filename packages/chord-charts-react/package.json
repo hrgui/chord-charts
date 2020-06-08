@@ -6,14 +6,15 @@
   "types": "build/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "dist": "tsc",
-    "postinstall": "yarn dist"
+    "dist": "tsc"
   },
   "dependencies": {
     "@hrgui/chord-charts": "*"
   },
   "devDependencies": {
-    "typescript": "2.9.2"
+    "classnames": "^2.2.6",
+    "jss": "^10.2.0",
+    "typescript": "^3.9.5"
   },
   "peerDependencies": {
     "react": "*"
