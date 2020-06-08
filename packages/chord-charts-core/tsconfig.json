@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "es7"],
+    "outDir": "./build",
+    "declaration": true,
+    "types": ["node"]
+  },
+  "exclude": [
+    "docs",
+    "__tests__",
+    "node_modules"
+  ]
+}

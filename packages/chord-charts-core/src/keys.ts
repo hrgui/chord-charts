@@ -1,0 +1,69 @@
+export const keys = [{
+  name: 'Ab',
+  value: 0,
+  type: 'F'
+}, {
+  name: 'A',
+  value: 1,
+  type: 'N'
+}, {
+  name: 'A#',
+  value: 2,
+  type: 'S'
+}, {
+  name: 'Bb',
+  value: 2,
+  type: 'F'
+}, {
+  name: 'B',
+  value: 3,
+  type: 'N'
+}, {
+  name: 'C',
+  value: 4,
+  type: 'N'
+}, {
+  name: 'C#',
+  value: 5,
+  type: 'S'
+}, {
+  name: 'Db',
+  value: 5,
+  type: 'F'
+}, {
+  name: 'D',
+  value: 6,
+  type: 'N'
+}, {
+  name: 'D#',
+  value: 7,
+  type: 'S'
+}, {
+  name: 'Eb',
+  value: 7,
+  type: 'F'
+}, {
+  name: 'E',
+  value: 8,
+  type: 'N'
+}, {
+  name: 'F',
+  value: 9,
+  type: 'N'
+}, {
+  name: 'F#',
+  value: 10,
+  type: 'S'
+}, {
+  name: 'Gb',
+  value: 10,
+  type: 'F'
+}, {
+  name: 'G',
+  value: 11,
+  type: 'N'
+}, {
+  name: 'G#',
+  value: 0,
+  type: 'S'
+}];

@@ -1,0 +1,39 @@
+{
+  "name": "@hrgui/chord-charts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/chord-charts.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "dist": "rm -rf build && tsc && webpack",
+    "postinstall": "yarn dist",
+    "test": "jest",
+    "demo": "webpack-dev-server --config=docs/demo.config.js",
+    "start": "yarn demo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jasmine": "^2.5.35",
+    "@types/node": "^9.6.0",
+    "jest": "^24.3.1",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.0.3",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+  }
+}
