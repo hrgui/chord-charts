@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.0"
+  },
+  "dependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "lerna run test --stream",
+    "docs-build": "lerna run docs-build --scope @hrgui/chord-charts"
+  }
+}

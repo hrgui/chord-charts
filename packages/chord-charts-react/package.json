@@ -1,0 +1,23 @@
+{
+  "name": "@hrgui/chord-charts-react",
+  "version": "1.0.0",
+  "module": "build/index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "dist": "tsc"
+  },
+  "devDependencies": {
+    "@hrgui/chord-charts": "*",
+    "classnames": "^2.2.6",
+    "jss": "^10.2.0",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "@hrgui/chord-charts": "*",
+    "react": "*",
+    "classnames": "^2.2.6",
+    "jss": "^10.1.1"
+  }
+}
