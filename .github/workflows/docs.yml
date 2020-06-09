@@ -1,6 +1,8 @@
 name: Build for Github Pages
 on:
   push:
+    paths:
+      - packages/**
     branches:
       - master
 jobs:
