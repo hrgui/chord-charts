@@ -17,6 +17,7 @@ on:
 jobs:
   automerge:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
       - name: automerge
         uses: 'pascalgn/automerge-action@master'
