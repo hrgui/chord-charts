@@ -564,11 +564,6 @@
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
 
-"@types/moo@^0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@types/moo/-/moo-0.5.4.tgz#a7d792c8c70af6f26d1717ccd20fe4a1fa926d43"
-  integrity sha512-1cJMV+3lvSvb21J4SqQlwxSwhCvrj8bmGnsHeODIokTAwGEn1fI9sGJWeAPCjArZicrtLF7Dg7frA1V7DT8Lrw==
-
 "@types/node@*":
   version "14.14.37"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
