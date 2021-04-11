@@ -1,7 +1,8 @@
 {
   "name": "@hrgui/chord-charts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Harman Goei",
   "license": "MIT",
   "scripts": {
