@@ -1,0 +1,19 @@
+name: PR Checker
+on:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: "https://registry.npmjs.org"
+      - name: yarn build-lib
+        run: |
+          yarn
+          yarn test
+        env:
+          CI: true
