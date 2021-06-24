@@ -116,15 +116,15 @@ export function wrap(input: string, fn: (str) => any, opts: InputOptions = {}) {
   return input.replace(new RegExp(chordRegex, opts.ignorecase ? "gi" : "g"), fn);
 }
 
-export function allChords(input: string, opts: InputOptions = {}) {
+export function allChords(input: string, opts: InputOptions & { sort?: boolean } = {}) {
   const matches = input.match(new RegExp(chordRegex, opts.ignorecase ? "gi" : "g"));
-  return !matches
-    ? []
-    : matches.sort(function (a, b) {
+  return opts.sort
+    ? matches.sort(function (a, b) {
         a = a.toLowerCase();
         b = b.toLowerCase();
         return a > b ? 1 : a < b ? -1 : 0;
-      });
+      })
+    : matches;
 }
 
 export function uniqueChords(input: string, opts: InputOptions = {}) {
@@ -136,7 +136,10 @@ export function transpose(input: string, originalKey: string, targetKey: string)
 }
 
 export function tranposeChord(chord: string, originalKey: string, targetKey: string) {
-  return chord.split('/').map(c => _transposeChord(c, originalKey, targetKey)).join('/');
+  return chord
+    .split("/")
+    .map((c) => _transposeChord(c, originalKey, targetKey))
+    .join("/");
 }
 
 function _transposeChord(chord: string, originalKey: string, targetKey: string) {
