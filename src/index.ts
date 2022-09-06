@@ -95,7 +95,7 @@ export const keys: Key[] = [
 export type InputOptions = { ignorecase?: boolean };
 
 const chordRegex =
-  // Word boundry followed by a root chord
+  // Word boundary followed by a root chord
   "\\b[A-G]" +
   "(?:" +
   // Attempt to match variations after the root chord, like a minor,
@@ -109,7 +109,7 @@ const chordRegex =
   // beginning of a bar, or matching the author's name who abbreviates his/her
   // last name.
   "(?!\\||—|-|\\.|:)" +
-  // Keep matching until a hash or word boundry
+  // Keep matching until a hash or word boundary
   "(?:\\b|#)+";
 
 export function wrap(input: string, fn: (str) => any, opts: InputOptions = {}) {

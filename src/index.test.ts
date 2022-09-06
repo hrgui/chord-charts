@@ -14,7 +14,7 @@ Was blind, but now I see.
 describe("allChords", () => {
   it("should be able to extract all the chords from a string unsorted", () => {
     expect(allChords(amazingGraceInput)).toMatchInlineSnapshot(`
-      Array [
+      [
         "D",
         "G",
         "D",
@@ -30,7 +30,7 @@ describe("allChords", () => {
 
   it("should be able to extract all the chords from a string sorted", () => {
     expect(allChords(amazingGraceInput, { sort: true })).toMatchInlineSnapshot(`
-      Array [
+      [
         "A7",
         "A7",
         "D",
@@ -48,7 +48,7 @@ describe("allChords", () => {
 describe("uniqueChords", () => {
   it("should return all the unique chords", () => {
     expect(uniqueChords(amazingGraceInput)).toMatchInlineSnapshot(`
-      Array [
+      [
         "D",
         "G",
         "A7",
