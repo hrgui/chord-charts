@@ -3,6 +3,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import tsconfigPaths from "vite-tsconfig-paths";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
       fileName: "chord-charts",
     },
   },
-  plugins: [tsconfigPaths()],
+  plugins: [tsconfigPaths(), dts({ exclude: ["**/*.test.ts", "**/*.test.tsx"] })],
   test: {
     environment: "jsdom",
     globals: true,
