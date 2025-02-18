@@ -5,12 +5,18 @@
   "module": "./dist/chord-charts.js",
   "exports": {
     ".": {
-      "import": "./dist/chord-charts.js",
-      "require": "./dist/chord-charts.umd.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/chord-charts.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/chord-charts.umd.cjs"
+      }
     }
   },
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "author": "Harman Goei",
   "license": "MIT",
   "scripts": {
