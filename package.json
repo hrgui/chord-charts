@@ -1,6 +1,6 @@
 {
   "name": "@hrgui/chord-charts",
-  "version": "4.0.0",
+  "version": "0.0.0-publish-using-github-actions.0",
   "main": "./dist/chord-charts.umd.cjs",
   "module": "./dist/chord-charts.js",
   "exports": {
