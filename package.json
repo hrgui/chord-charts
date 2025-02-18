@@ -1,6 +1,6 @@
 {
   "name": "@hrgui/chord-charts",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "main": "./dist/chord-charts.umd.cjs",
   "module": "./dist/chord-charts.js",
   "exports": {
@@ -14,19 +14,19 @@
   "author": "Harman Goei",
   "license": "MIT",
   "scripts": {
-    "build": "vite build && yarn tsc src/index.ts  --declaration --emitDeclarationOnly --outDir dist",
+    "build": "vite build && yarn tsc src/index.ts --declaration --emitDeclarationOnly --outDir dist",
     "test": "vitest",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "devDependencies": {
-    "husky": ">=6",
-    "jsdom": "^20.0.0",
-    "lint-staged": ">=10",
-    "prettier": "^2.2.1",
-    "typescript": "^4.8.2",
-    "vite": "^3.1.0",
-    "vite-tsconfig-paths": "^3.5.0",
-    "vitest": "^0.23.1"
+    "husky": "^9.1.7",
+    "jsdom": "^26.0.0",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.5"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
