@@ -14,9 +14,6 @@ on:
       - "bun.lockb"
     branches:
       - main
-defaults:
-  run:
-    working-directory: ./docs
 jobs:
   build-deploy:
-    uses: hrgui/my-personal-gh-workflows/.github/workflows/bun_gh_pages.yml@main
+    uses: hrgui/my-personal-gh-workflows/.github/workflows/bun_gh_pages_docs.yml@main
