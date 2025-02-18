@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "./",
+  base: "/chord-charts/",
   title: "Chord Charts",
   description: "A NPM package to transpose and manage chord charts for music",
   themeConfig: {
