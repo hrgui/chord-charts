@@ -17,3 +17,6 @@ on:
 jobs:
   build-deploy:
     uses: hrgui/my-personal-gh-workflows/.github/workflows/bun_gh_pages_docs.yml@main
+    with:
+      working_directory: "./docs"
+      dist_directory: "./vitepress/dist"
