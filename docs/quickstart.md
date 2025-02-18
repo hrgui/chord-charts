@@ -52,13 +52,13 @@ Was blind, but now I see.
 ```
 
 <script setup>
-import { ref, useTemplateRef} from 'vue'
+import { ref, useTemplateRef, watch } from 'vue'
 
 import { transpose, keys } from "@hrgui/chord-charts";
 
 
 const count = ref(0)
-const originalKey = 'D';
+const previousKey = ref('D')
 const currentKey = ref('D')
 
 const text = ref(`
@@ -72,8 +72,10 @@ const text = ref(`
   Was blind, but now I see.
 `);
 
-function transposeChordChart() {
-  text.value = transpose(text.value, originalKey, currentKey.value);
+
+function transposeChordChart(e) {
+  text.value = transpose(text.value, previousKey.value, e.target.value);
+  previousKey.value = e.target.value;
 }
 
 </script>
