@@ -14,7 +14,8 @@
   "author": "Harman Goei",
   "license": "MIT",
   "scripts": {
-    "build": "vite build && yarn tsc src/index.ts --declaration --emitDeclarationOnly --outDir dist",
+    "build": "vite build && bun tsc src/index.ts --declaration --emitDeclarationOnly --outDir dist",
+    "lint": "bun tsc --noEmit",
     "test": "vitest",
     "prepare": "husky"
   },
