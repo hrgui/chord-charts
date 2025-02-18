@@ -1,7 +1,0 @@
-name: Node.js Package
-on:
-  release:
-    types: [created]
-jobs:
-  build-publish:
-    uses: hrgui/my-personal-gh-workflows/.github/workflows/bun_publish.yml@main
