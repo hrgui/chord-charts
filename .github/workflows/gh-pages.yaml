@@ -1,0 +1,22 @@
+name: Build and Deploy for Github Pages
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "docs/**"
+      - "public/**"
+      - ".github/workflows/**"
+      - "package.json"
+      - "vite.config.ts"
+      - "astro.config.mjs"
+      - "yarn.lock"
+      - "bun.lockb"
+    branches:
+      - main
+defaults:
+  run:
+    working-directory: ./docs
+jobs:
+  build-deploy:
+    uses: hrgui/my-personal-gh-workflows/.github/workflows/bun_gh_pages.yml@main
