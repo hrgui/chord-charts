@@ -7,10 +7,7 @@ export default defineConfig({
   description: "A NPM package to transpose and manage chord charts for music",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Quickstart", link: "/quickstart" },
-    ],
+    nav: [{ text: "Demo", link: "/" }],
     socialLinks: [{ icon: "github", link: "https://github.com/hrgui/chord-charts" }],
   },
 });

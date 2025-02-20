@@ -5,6 +5,9 @@
   "devDependencies": {
     "@hrgui/chord-charts": "latest",
     "@types/bun": "latest",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "3",
     "vitepress": "^1.6.3"
   },
   "peerDependencies": {
