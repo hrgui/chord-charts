@@ -1,0 +1,11 @@
+{
+  "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "docsRoot": "./docs",
+  "out": "./docs/api",
+  "sidebar": {
+    "autoConfiguration": true,
+    "format": "vitepress",
+    "pretty": false,
+    "collapsed": true
+  }
+}

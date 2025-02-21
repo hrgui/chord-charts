@@ -57,7 +57,7 @@ describe("uniqueChords", () => {
   });
 });
 
-describe("tranpose", () => {
+describe("transpose", () => {
   it("should be able to transpose a song down a key", () => {
     expect(transpose(amazingGraceInput, "D", "C")).toMatchInlineSnapshot(`
       "

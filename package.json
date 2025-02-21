@@ -23,7 +23,8 @@
     "build": "vite build",
     "lint": "bun tsc --noEmit",
     "test": "vitest",
-    "prepare": "./node_modules/.bin/husky"
+    "prepare": "./node_modules/.bin/husky",
+    "typedoc": "bunx typedoc --exclude \"**/*+(index|.spec|.e2e|.test).ts\" --entryPointStrategy Expand src"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
@@ -32,6 +33,9 @@
     "jsdom": "^26.0.0",
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.1",
+    "typedoc": "^0.27.7",
+    "typedoc-plugin-markdown": "^4.4.2",
+    "typedoc-vitepress-theme": "^1.1.2",
     "typescript": "^5.7.3",
     "vite": "^6.1.0",
     "vite-plugin-dts": "^4.5.0",

@@ -1,9 +1,13 @@
 export type Key = {
+  /** Name of the key, e.g. Ab, A, A# */
   name: string;
+  /** Value, starts from 0 and ends at 11 (chromatic scale) */
   value: number;
+  /** F = Flat, N = Neutral, S = Sharp */
   type: "F" | "N" | "S";
 };
 
+/** All keys, including flats, neutral and sharp */
 export const keys: Key[] = [
   {
     name: "Ab",
@@ -92,7 +96,10 @@ export const keys: Key[] = [
   },
 ];
 
-export type InputOptions = { ignorecase?: boolean };
+export type InputOptions = {
+  /** Ignores case */
+  ignorecase?: boolean;
+};
 
 const chordRegex =
   // Word boundary followed by a root chord
@@ -116,6 +123,12 @@ export function wrap(input: string, fn: (str) => any, opts: InputOptions = {}) {
   return input.replace(new RegExp(chordRegex, opts.ignorecase ? "gi" : "g"), fn);
 }
 
+/**
+ * Extras only the chords from the input string
+ * @param input given a chord chart
+ * @param opts Input Options, including sort
+ * @returns
+ */
 export function allChords(input: string, opts: InputOptions & { sort?: boolean } = {}) {
   const matches = input.match(new RegExp(chordRegex, opts.ignorecase ? "gi" : "g"));
   return opts.sort
@@ -127,14 +140,34 @@ export function allChords(input: string, opts: InputOptions & { sort?: boolean }
     : matches;
 }
 
+/**
+ * Shows the unique chords of a chord chart, used to establish a key
+ * @param input
+ * @param opts
+ * @returns
+ */
 export function uniqueChords(input: string, opts: InputOptions = {}) {
   return Array.from(new Set(allChords(input, opts)));
 }
 
+/**
+ * Transposes a chord chart to a new key
+ * @param input chord chart
+ * @param originalKey the original key the chord chart was in
+ * @param targetKey the target key to transpose the chord chart to
+ * @returns
+ */
 export function transpose(input: string, originalKey: string, targetKey: string) {
   return wrap(input, (chord) => tranposeChord(chord, originalKey, targetKey));
 }
 
+/**
+ * Transposes a single chord
+ * @param chord chord to transpose, e.g. Dm7
+ * @param originalKey the original key the chord was in
+ * @param targetKey the target key to transpose the chord to
+ * @returns
+ */
 export function tranposeChord(chord: string, originalKey: string, targetKey: string) {
   return chord
     .split("/")
